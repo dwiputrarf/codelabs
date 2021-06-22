@@ -17,7 +17,6 @@ abstract class BaseActivity<R : BaseViewModel> : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         setContentView(layoutResourceId)
 
         initIntent()

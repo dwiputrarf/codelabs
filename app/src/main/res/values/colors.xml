@@ -9,4 +9,11 @@
 
     <color name="black_overlay">#66000000</color>
 
+    <color name="lightBackground">#ECECEA</color>
+    <color name="darkBackground">#505050</color>
+    <color name="lightSurface">#FFFFFF</color>
+    <color name="darkSurface">#BDBDC7</color>
+    <color name="lightOnSurface">#000000</color>
+    <color name="darkOnSurface">#FFFFFF</color>
+
 </resources>
