@@ -15,7 +15,6 @@
         <activity
             android:name=".ui.SplashScreenActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
-            android:label="@string/title_activity_splashscreen"
             android:theme="@style/Theme.Codelabs.Fullscreen">
 
             <intent-filter>
