@@ -16,9 +16,10 @@ class MainApplication : Application() {
         }
     }
 
-    fun getDefinedModules(): List<Module> {
+    private fun getDefinedModules(): List<Module> {
         return arrayListOf(
             apiModule,
             userModule
-        )}
+        )
+    }
 }
