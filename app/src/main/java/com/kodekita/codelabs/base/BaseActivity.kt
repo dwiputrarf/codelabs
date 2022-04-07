@@ -3,29 +3,34 @@ package com.kodekita.codelabs.base
 import android.app.ProgressDialog
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.viewbinding.ViewBinding
 import com.kodekita.codelabs.R
 
-abstract class BaseActivity<T : BaseViewModel> : AppCompatActivity() {
+abstract class BaseActivity<VM : BaseViewModel, VB : ViewBinding> : AppCompatActivity() {
 
-    abstract val layoutResourceId: Int
-
-    abstract val viewModel: T
+    abstract val viewModel: VM
+    private lateinit var binding: VB
 
     private var mProgressDialog: ProgressDialog? = null
-
-    abstract fun initIntent()
-    abstract fun initDataBinding()
-    abstract fun initAction()
-
     private var isSetBackButtonValid = false
+
+    abstract fun getViewBinding(): VB
+
+    protected abstract fun initIntent()
+    protected abstract fun initData()
+    protected abstract fun initAction()
+    protected abstract fun initObserver()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(layoutResourceId)
+        binding = getViewBinding()
+
+        setContentView(binding.root)
 
         initIntent()
-        initDataBinding()
+        initData()
         initAction()
+        initObserver()
     }
 
     fun showLoading() {

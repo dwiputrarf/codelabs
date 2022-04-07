@@ -1,4 +1,4 @@
-package com.kodekita.codelabs.local.user
+package com.kodekita.codelabs.domain
 
 import android.os.Parcelable
 import kotlinx.android.parcel.Parcelize

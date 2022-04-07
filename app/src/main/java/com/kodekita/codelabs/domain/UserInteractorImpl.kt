@@ -1,4 +1,4 @@
-package com.kodekita.codelabs.local.user
+package com.kodekita.codelabs.domain
 
 import com.kodekita.codelabs.data.user.remote.UserRepository
 import io.reactivex.Single

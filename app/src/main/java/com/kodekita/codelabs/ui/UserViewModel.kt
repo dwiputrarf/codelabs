@@ -3,14 +3,10 @@ package com.kodekita.codelabs.ui
 import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import com.kodekita.codelabs.base.BaseViewModel
-import com.kodekita.codelabs.data.user.remote.UserRepository
-import com.kodekita.codelabs.data.user.response.UserData
-import com.kodekita.codelabs.local.user.User
-import com.kodekita.codelabs.local.user.UserInteractor
+import com.kodekita.codelabs.domain.User
+import com.kodekita.codelabs.domain.UserInteractor
 import io.reactivex.android.schedulers.AndroidSchedulers
-import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers
-import kotlin.Result.Companion
 
 class UserViewModel(private val repo: UserInteractor) : BaseViewModel() {
 

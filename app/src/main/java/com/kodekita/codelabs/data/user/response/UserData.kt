@@ -1,7 +1,7 @@
 package com.kodekita.codelabs.data.user.response
 
 import com.google.gson.annotations.SerializedName
-import com.kodekita.codelabs.local.user.User
+import com.kodekita.codelabs.domain.User
 import com.kodekita.codelabs.utils.common.addSpace
 
 data class UserData(
